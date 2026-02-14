@@ -78,7 +78,7 @@ Automated tests use **Vitest** and **React Testing Library**. Prerequisites: Nod
 - `npm run test:run` – single run (e.g. for CI)
 - `npm run test:coverage` – single run with coverage report (text + `coverage/index.html`)
 
-**What's tested:** Branch/response schemas (Zod), geo utilities (haversine, geolocation error messages), API client (`fetchBranches`), Zustand store, `useFilteredBranches` and `useBranchesQuery` hooks, SearchBar, BranchList, BranchDetailModal, and the error boundary. The map and Leaflet are mocked in unit/component tests. For full user flows, consider adding E2E (e.g. Playwright) later.
+**What's tested:** Branch/response schemas (Zod), geo utilities (haversine, geolocation error messages), API client (`fetchBranches`), Zustand store, `useFilteredBranches` and `useBranchesQuery` hooks, SearchBar, BranchList, BranchDetailModal, and the error boundary. The map and Leaflet are mocked in unit/component tests. For full user flows, I will consider adding E2E (e.g. Playwright) later.
 
 
 ## Project Structure
@@ -114,7 +114,7 @@ capitec/
 
 ## Author
 
-- **Brandon N Nkawu** – Developed with hopes for a job opportunity.
+- **Brandon N Nkawu**
 - **LinkedIn**: [https://www.linkedin.com/in/brandonnkawu/](https://www.linkedin.com/in/brandonnkawu/)
 - **Email**: [brandonnkawu01@gmail.com](mailto:brandonnkawu01@gmail.com)
 - **Website**: [https://www.orrbit.co.za/](https://www.orrbit.co.za/)
