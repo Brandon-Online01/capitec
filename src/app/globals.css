@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* Leaflet map styles (required for React-Leaflet) */
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+  --primary-red: #e51718;
+  --primary-blue: rgb(47, 112, 239);
+  --primary-green: #16a34a;
+  --gray-f5: #f5f5f5;
+  --gray-333: #333333;
+}
+
+/* Capitec design system – theme tokens for Tailwind v4 */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-red: var(--primary-red);
+  --color-primary-blue: var(--primary-blue);
+  --color-primary-green: var(--primary-green);
+  --color-gray-f5: var(--gray-f5);
+  --color-gray-333: var(--gray-333);
+  --font-sans: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  /* 8px border radius, subtle shadow for cards/buttons */
+  --radius-card: 8px;
+  --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--gray-f5);
+  color: var(--foreground);
+  font-family: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+}
+
+/* Headings: 24–32px bold */
+h1 {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+}
+/* Smaller details */
+.text-detail {
+  font-size: 14px;
+}
+
+/* Map popup – just rounded corners (trimmed from default) */
+.leaflet-popup-content-wrapper {
+  border-radius: 4px;
+}
+
+/* Map popup and marker text – Nunito Sans so it matches the app */
+.leaflet-popup-content-font {
+  font-family: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  color: var(--gray-333);
+}
+.leaflet-popup-content-font p {
+  margin: 0 0 0.25rem 0;
+  font-family: inherit;
+  font-size: 14px;
+}
+.leaflet-popup-content-font p:first-child {
+  font-weight: 600;
+  font-size: 16px;
+}
+.leaflet-popup-content-font p:last-child {
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+/* Simple thin blue scrollbar (vertical and horizontal) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-blue) transparent;
+}
+*::-webkit-scrollbar {
+  width: 1px;
+  height: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 1px;
+  width: 1px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(47, 112, 239);
+  border-radius: 1px;
+  width: 1px;
+}
+
+/* Cursor consistency: pointer on interactive controls, not-allowed on disabled */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+/* Respect reduced motion for users sensitive to fast or flashy animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Shared scrollable panel – same scroll behaviour as branch list (used in list + branch detail side sheet) */
+.scroll-panel {
+  min-height: 0;
+  overflow-y: auto;
+}

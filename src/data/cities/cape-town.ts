@@ -1,0 +1,47 @@
+import type { BranchInput } from "./branch-input";
+
+const HOURS = "Mon-Fri: 9AM-5PM, Sat: 9AM-1PM";
+const SERVICES = ["ATM", "Deposits", "Withdrawals", "Consulting"];
+
+/** ~38 Cape Town area branches and ATMs */
+export const capeTownBranches: BranchInput[] = [
+  { type: "branch", name: "Cape Town Central", lat: -33.9249, lng: 18.4241, address: "123 Main St, Cape Town City Centre, 8001", hours: HOURS, services: SERVICES, phone: "+27 21 123 4567", email: "capetown.central@capitec.co.za" },
+  { type: "atm", name: "Sea Point", lat: -33.918, lng: 18.398, address: "78 Regent Rd, Sea Point, 8060", hours: HOURS, services: [...SERVICES, "Foreign Exchange"], phone: "+27 21 123 4568", email: "seapoint@capitec.co.za" },
+  { type: "branch", name: "Claremont", lat: -33.982, lng: 18.465, address: "45 Main Rd, Claremont, 7708", hours: HOURS, services: SERVICES, phone: "+27 21 123 4569", email: "claremont@capitec.co.za" },
+  { type: "atm", name: "Bellville", lat: -33.903, lng: 18.628, address: "12 Voortrekker Rd, Bellville, 7530", hours: HOURS, services: SERVICES, phone: "+27 21 123 4570", email: "bellville@capitec.co.za" },
+  { type: "branch", name: "Parow", lat: -33.895, lng: 18.612, address: "88 Voortrekker Rd, Parow, 7500", hours: HOURS, services: SERVICES, phone: "+27 21 123 4571", email: "parow@capitec.co.za" },
+  { type: "atm", name: "Durbanville", lat: -33.832, lng: 18.648, address: "22 Wellington Rd, Durbanville, 7550", hours: HOURS, services: SERVICES, phone: "+27 21 123 4572", email: "durbanville@capitec.co.za" },
+  { type: "branch", name: "Somerset West", lat: -34.085, lng: 18.842, address: "56 Main Rd, Somerset West, 7130", hours: HOURS, services: SERVICES, phone: "+27 21 123 4573", email: "somersetwest@capitec.co.za" },
+  { type: "atm", name: "Stellenbosch", lat: -33.935, lng: 18.860, address: "34 Church St, Stellenbosch, 7600", hours: HOURS, services: SERVICES, phone: "+27 21 123 4574", email: "stellenbosch@capitec.co.za" },
+  { type: "branch", name: "Cavendish", lat: -34.042, lng: 18.458, address: "Cavendish Square, Claremont, 7708", hours: "Mon-Sat: 9AM-5PM", services: SERVICES, phone: "+27 21 123 4575", email: "cavendish@capitec.co.za" },
+  { type: "atm", name: "Canal Walk", lat: -33.878, lng: 18.512, address: "Canal Walk Shopping Centre, Century City, 7441", hours: "Mon-Sat: 9AM-7PM", services: SERVICES, phone: "+27 21 123 4576", email: "canalwalk@capitec.co.za" },
+  { type: "branch", name: "Tyger Valley", lat: -33.868, lng: 18.638, address: "Tyger Valley Centre, Bellville, 7530", hours: "Mon-Sat: 9AM-6PM", services: SERVICES, phone: "+27 21 123 4577", email: "tygervalley@capitec.co.za" },
+  { type: "atm", name: "V&A Waterfront", lat: -33.905, lng: 18.421, address: "V&A Waterfront, Cape Town, 8001", hours: "Mon-Sun: 9AM-6PM", services: [...SERVICES, "Foreign Exchange"], phone: "+27 21 123 4578", email: "waterfront@capitec.co.za" },
+  { type: "branch", name: "Observatory", lat: -33.938, lng: 18.472, address: "90 Lower Main Rd, Observatory, 7925", hours: HOURS, services: SERVICES, phone: "+27 21 123 4579", email: "observatory@capitec.co.za" },
+  { type: "atm", name: "Rondebosch", lat: -33.963, lng: 18.472, address: "44 Main Rd, Rondebosch, 7700", hours: HOURS, services: SERVICES, phone: "+27 21 123 4580", email: "rondebosch@capitec.co.za" },
+  { type: "branch", name: "Wynberg", lat: -34.002, lng: 18.468, address: "200 Main Rd, Wynberg, 7800", hours: HOURS, services: SERVICES, phone: "+27 21 123 4581", email: "wynberg@capitec.co.za" },
+  { type: "atm", name: "Constantia", lat: -34.028, lng: 18.448, address: "Constantia Village, Constantia, 7806", hours: HOURS, services: SERVICES, phone: "+27 21 123 4582", email: "constantia@capitec.co.za" },
+  { type: "branch", name: "Plumstead", lat: -34.022, lng: 18.472, address: "18 Main Rd, Plumstead, 7800", hours: HOURS, services: SERVICES, phone: "+27 21 123 4583", email: "plumstead@capitec.co.za" },
+  { type: "atm", name: "Fish Hoek", lat: -34.138, lng: 18.435, address: "12 Central Rd, Fish Hoek, 7975", hours: HOURS, services: SERVICES, phone: "+27 21 123 4584", email: "fishhoek@capitec.co.za" },
+  { type: "branch", name: "Simon's Town", lat: -34.195, lng: 18.435, address: "88 St George's St, Simon's Town, 7995", hours: HOURS, services: SERVICES, phone: "+27 21 123 4585", email: "simonstown@capitec.co.za" },
+  { type: "atm", name: "Mitchells Plain", lat: -34.048, lng: 18.612, address: "Town Centre, Mitchells Plain, 7785", hours: HOURS, services: SERVICES, phone: "+27 21 123 4586", email: "mitchellsplain@capitec.co.za" },
+  { type: "branch", name: "Khayelitsha", lat: -34.042, lng: 18.678, address: "Site C, Khayelitsha, 7784", hours: HOURS, services: SERVICES, phone: "+27 21 123 4587", email: "khayelitsha@capitec.co.za" },
+  { type: "atm", name: "Gugulethu", lat: -33.988, lng: 18.568, address: "NY 1, Gugulethu, 7750", hours: HOURS, services: SERVICES, phone: "+27 21 123 4588", email: "gugulethu@capitec.co.za" },
+  { type: "branch", name: "Langa", lat: -33.945, lng: 18.532, address: "Washington St, Langa, 7455", hours: HOURS, services: SERVICES, phone: "+27 21 123 4589", email: "langa@capitec.co.za" },
+  { type: "atm", name: "Paarl", lat: -33.735, lng: 18.958, address: "88 Main St, Paarl, 7646", hours: HOURS, services: SERVICES, phone: "+27 21 123 4590", email: "paarl@capitec.co.za" },
+  { type: "branch", name: "Wellington", lat: -33.642, lng: 18.985, address: "22 Main Rd, Wellington, 7655", hours: HOURS, services: SERVICES, phone: "+27 21 123 4591", email: "wellington@capitec.co.za" },
+  { type: "atm", name: "Malmesbury", lat: -33.455, lng: 18.728, address: "12 Church St, Malmesbury, 7300", hours: HOURS, services: SERVICES, phone: "+27 21 123 4592", email: "malmesbury@capitec.co.za" },
+  { type: "branch", name: "Worcester", lat: -33.645, lng: 19.448, address: "56 High St, Worcester, 6850", hours: HOURS, services: SERVICES, phone: "+27 23 123 4593", email: "worcester@capitec.co.za" },
+  { type: "atm", name: "George", lat: -33.958, lng: 22.458, address: "78 York St, George, 6529", hours: HOURS, services: SERVICES, phone: "+27 44 123 4594", email: "george@capitec.co.za" },
+  { type: "branch", name: "Knysna", lat: -34.035, lng: 23.048, address: "44 Main Rd, Knysna, 6570", hours: HOURS, services: SERVICES, phone: "+27 44 123 4595", email: "knysna@capitec.co.za" },
+  { type: "atm", name: "Mossel Bay", lat: -34.182, lng: 22.145, address: "12 Marsh St, Mossel Bay, 6500", hours: HOURS, services: SERVICES, phone: "+27 44 123 4596", email: "mosselbay@capitec.co.za" },
+  { type: "branch", name: "Oudtshoorn", lat: -33.585, lng: 22.202, address: "88 Baron van Reede St, Oudtshoorn, 6620", hours: HOURS, services: SERVICES, phone: "+27 44 123 4597", email: "oudtshoorn@capitec.co.za" },
+  { type: "atm", name: "Kuils River", lat: -33.932, lng: 18.678, address: "22 Van Riebeeck Rd, Kuils River, 7580", hours: HOURS, services: SERVICES, phone: "+27 21 123 4598", email: "kuilsriver@capitec.co.za" },
+  { type: "branch", name: "Brackenfell", lat: -33.868, lng: 18.702, address: "Brackenfell Blvd, Brackenfell, 7560", hours: HOURS, services: SERVICES, phone: "+27 21 123 4599", email: "brackenfell@capitec.co.za" },
+  { type: "atm", name: "Goodwood", lat: -33.905, lng: 18.558, address: "45 Voortrekker Rd, Goodwood, 7460", hours: HOURS, services: SERVICES, phone: "+27 21 123 4600", email: "goodwood@capitec.co.za" },
+  { type: "branch", name: "Pinelands", lat: -33.938, lng: 18.512, address: "12 Forest Dr, Pinelands, 7405", hours: HOURS, services: SERVICES, phone: "+27 21 123 4601", email: "pinelands@capitec.co.za" },
+  { type: "atm", name: "Milnerton", lat: -33.872, lng: 18.502, address: "88 Koeberg Rd, Milnerton, 7441", hours: HOURS, services: SERVICES, phone: "+27 21 123 4602", email: "milnerton@capitec.co.za" },
+  { type: "branch", name: "Table View", lat: -33.818, lng: 18.488, address: "Table View Mall, Table View, 7439", hours: "Mon-Sat: 9AM-6PM", services: SERVICES, phone: "+27 21 123 4603", email: "tableview@capitec.co.za" },
+  { type: "atm", name: "Blouberg", lat: -33.802, lng: 18.462, address: "22 Otto du Plessis Dr, Blouberg, 7441", hours: HOURS, services: SERVICES, phone: "+27 21 123 4604", email: "blouberg@capitec.co.za" },
+  { type: "branch", name: "Langebaan", lat: -33.098, lng: 18.032, address: "12 Main Rd, Langebaan, 7357", hours: HOURS, services: SERVICES, phone: "+27 22 123 4605", email: "langebaan@capitec.co.za" },
+];
