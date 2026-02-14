@@ -114,8 +114,7 @@ capitec/
 
 ## Author
 
-- **Brandon N Nkawu**
-- **LinkedIn**: [https://www.linkedin.com/in/brandonnkawu/](https://www.linkedin.com/in/brandonnkawu/)
+- **Brandon N Nkawu**: [https://www.linkedin.com/in/brandonnkawu/](https://www.linkedin.com/in/brandonnkawu/)
 - **Email**: [brandonnkawu01@gmail.com](mailto:brandonnkawu01@gmail.com)
 - **Website**: [https://www.orrbit.co.za/](https://www.orrbit.co.za/)
 - **Hobbies**: Everything to do with software, drones, AI and automation.
