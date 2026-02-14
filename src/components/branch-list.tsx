@@ -16,7 +16,7 @@ export function BranchList({ branches }: BranchListProps) {
 
   return (
     <ul
-      className="flex flex-col gap-2 pb-4"
+      className="flex flex-col gap-1.5 pb-4 md:gap-2"
       role="list"
       aria-label="Branches and ATMs list"
       aria-live="polite"
@@ -27,7 +27,7 @@ export function BranchList({ branches }: BranchListProps) {
             key="empty"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="rounded bg-[var(--gray-f5)] p-4 text-detail text-[var(--gray-333)]"
+            className="rounded bg-[var(--gray-f5)] p-3 text-detail text-[var(--gray-333)] md:p-4"
           >
             No branches or ATMs match your search.
           </motion.li>
@@ -39,7 +39,7 @@ export function BranchList({ branches }: BranchListProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
               transition={{ delay: i * 0.05 }}
-              className="cursor-pointer rounded border border-[#e5e5e5] bg-white p-4 transition-colors hover:bg-[var(--gray-f5)]"
+              className="cursor-pointer rounded border border-[#e5e5e5] bg-white p-3 transition-colors hover:bg-[var(--gray-f5)] md:p-4"
               onClick={() => setSelectedBranch(branch.id)}
             >
               <div className="flex gap-3">

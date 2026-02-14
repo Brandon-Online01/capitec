@@ -16,7 +16,7 @@ export function SearchBar() {
       transition={{ duration: 0.3 }}
     >
       <Search
-        className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--gray-333)]"
+        className="absolute left-2.5 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--gray-333)] md:left-3"
         aria-hidden
       />
       <input
@@ -24,7 +24,7 @@ export function SearchBar() {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search by branch name or address…"
-        className="w-full rounded border border-[var(--primary-blue)]/30 bg-white py-3 pl-10 pr-10 text-base text-[var(--gray-333)] shadow-[var(--shadow-card)] outline-none transition-colors placeholder:text-gray-400 focus:border-[var(--primary-blue)] focus:ring-2 focus:ring-[var(--primary-blue)]/20"
+        className="w-full rounded border border-[var(--primary-blue)]/30 bg-white py-2.5 pl-9 pr-10 text-base text-[var(--gray-333)] shadow-[var(--shadow-card)] outline-none transition-colors placeholder:text-gray-400 focus:border-[var(--primary-blue)] focus:ring-2 focus:ring-[var(--primary-blue)]/20 md:py-3 md:pl-10"
         aria-label="Search branches by name or location"
       />
       {searchQuery.length > 0 && (

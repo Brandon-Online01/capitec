@@ -13,6 +13,7 @@ import { MapError } from "@/components/map/map-error";
 import { SearchBar } from "@/components/search-bar";
 import { BranchList } from "@/components/branch-list";
 import { BranchDetailModal } from "@/components/branch-detail-modal";
+import { BranchDetailAccordion } from "@/components/branch-detail-accordion";
 
 const BranchMap = dynamic(
   () => import("@/components/map/branch-map").then((m) => ({ default: m.BranchMap })),
@@ -107,7 +108,7 @@ export function BranchLocatorLayout() {
   return (
     <main className="flex h-[calc(100vh-1rem)] flex-col overflow-hidden" role="main">
       {/* Intro above map */}
-      <section className="shrink-0 px-4 pt-4 pb-2 md:px-6" aria-labelledby="branches-heading">
+      <section className="shrink-0 px-3 pt-3 pb-1.5 md:px-6" aria-labelledby="branches-heading">
         <h1 id="branches-heading" className="text-2xl font-bold text-[var(--primary-blue)] md:text-3xl">
           Branches
         </h1>
@@ -154,7 +155,7 @@ export function BranchLocatorLayout() {
 
       {/* Sidebar – list + search; collapsible on mobile */}
       <aside
-        className={`flex w-full flex-col gap-4 overflow-hidden p-4 md:flex-[0_0_35%] md:min-h-0 ${sidebarOpen ? "block" : "hidden md:flex"}`}
+        className={`flex w-full flex-col gap-3 overflow-hidden p-3 md:flex-[0_0_35%] md:min-h-0 md:gap-4 md:p-4 ${sidebarOpen ? "block" : "hidden md:flex"}`}
         aria-label="Branch list and search"
       >
         <div className="shrink-0 space-y-1">
@@ -176,7 +177,10 @@ export function BranchLocatorLayout() {
           <p className="mb-2 shrink-0 text-detail text-[var(--gray-333)]" aria-live="polite">
             {filteredBranches.length} location{filteredBranches.length !== 1 ? "s" : ""} (branches &amp; ATMs)
           </p>
-          <div className="scroll-panel flex-1" aria-label="Scrollable branch list">
+          <div className="scroll-panel flex-1 space-y-3" aria-label="Scrollable branch list">
+            {selectedBranch && (
+              <BranchDetailAccordion key={selectedBranch.id} branch={selectedBranch} />
+            )}
             <BranchList branches={filteredBranches} />
           </div>
         </div>

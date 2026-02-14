@@ -102,7 +102,7 @@ export function PopularTimesChart({ branchId, branchName, locationType = "branch
   const chartSummaryId = "popular-times-chart-summary";
   return (
     <section
-      className="rounded border border-[var(--gray-f5)] p-4"
+      className="rounded border border-[var(--gray-f5)] p-3 md:p-4"
       aria-label={`Popular times for ${branchName ?? "this branch"}`}
       aria-describedby={chartSummaryId}
     >
