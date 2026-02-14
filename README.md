@@ -37,6 +37,7 @@ A responsive map-based web app for finding the nearest Capitec Bank branch. Buil
 ```bash
 cd capitec
 npm ci
+npm run test:run   # optional: run tests before build
 npm run build
 ```
 
@@ -69,7 +70,16 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 ## Testing
 
-No automated test suite is included. Manual QA is recommended: search, click list items and markers, open/close modal, resize for mobile/desktop, and use “My location” (with browser location allowed).
+Automated tests use **Vitest** and **React Testing Library**. Prerequisites: Node.js 20+ and install dependencies with `npm ci`.
+
+**Commands:**
+
+- `npm test` – run tests in watch mode
+- `npm run test:run` – single run (e.g. for CI)
+- `npm run test:coverage` – single run with coverage report (text + `coverage/index.html`)
+
+**What's tested:** Branch/response schemas (Zod), geo utilities (haversine, geolocation error messages), API client (`fetchBranches`), Zustand store, `useFilteredBranches` and `useBranchesQuery` hooks, SearchBar, BranchList, BranchDetailModal, and the error boundary. The map and Leaflet are mocked in unit/component tests. For full user flows, consider adding E2E (e.g. Playwright) later.
+
 
 ## Project Structure
 
